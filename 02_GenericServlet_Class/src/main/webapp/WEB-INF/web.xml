@@ -33,9 +33,5 @@
 		</init-param>
 	</servlet>
 	
-	<servlet-mapping>
-        <servlet-name>Basic2GenericServlet</servlet-name>
-        <url-pattern>/basic2</url-pattern>
-    </servlet-mapping>
 
 </web-app>
