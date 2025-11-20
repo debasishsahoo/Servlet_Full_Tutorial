@@ -1,0 +1,73 @@
+`=== Compiled Class Files ===
+
+Java class files, compiled from source
+
+*.class
+
+Package files
+
+*.jar
+*.war
+*.ear
+*.zip
+*.tar
+*.gz
+
+Compiled files from Maven/Gradle/IDE builds
+
+**/target/
+**/build/
+
+=== IDE Files (Eclipse, IntelliJ, VS Code) ===
+
+Eclipse Project Files
+Servers/
+.classpath
+.project
+.settings/
+.metadata/
+*.log
+*.bak
+
+Eclipse specific build folders
+
+bin/
+tmp/
+temp/
+
+External IDE libraries stored locally (optional, but recommended)
+
+lib/
+
+IntelliJ IDEA Files
+
+.idea/
+*.iml
+*.iws
+*.ipr
+
+VS Code Files
+
+.vscode/
+
+=== OS Generated Files ===
+
+Thumbnails
+
+.DS_Store
+
+Linux trash files
+
+*~
+
+Windows temporary files
+
+Thumbs.db
+ehthumbs.db
+
+=== Logs and Runtime Files ===
+
+logs/
+temp/
+*.log
+*.tmp
