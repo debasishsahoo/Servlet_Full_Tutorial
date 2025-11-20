@@ -33,6 +33,7 @@ public class RequestDemoServlet extends HttpServlet {
 		// Passing everything to result JSP
 		request.setAttribute("username", username);
 		request.setAttribute("email", email);
+		request.setAttribute("password", password);
 		request.setAttribute("hobbies", hobbies);
 		request.setAttribute("rawBody", rawBody);
 		request.setAttribute("clientIP", clientIP);
