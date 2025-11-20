@@ -8,8 +8,8 @@ import jakarta.servlet.ServletResponse;
 import jakarta.servlet.annotation.WebServlet;
 import java.io.IOException;
 
-@WebServlet("/basic")
-public class BasicGenericServlet extends GenericServlet {
+@WebServlet("/basic1")
+public class Basic1GenericServlet extends GenericServlet {
 	private static final long serialVersionUID = 1L;
 
 	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {

@@ -91,11 +91,37 @@ label {
 		<p class="text-center subtitle">Servlet Demonstration.</p>
 
 		<div class="text-center mb-3">
-			<a href="basic" class="btn-link-custom"> Go to
-				Basic GenericServlet </a>
+			<a href="basic1" class="btn-link-custom"> Go to Basic
+				GenericServlet </a>
 		</div>
 
 		<div class="divider"></div>
+
+		<h3 class="text-center">GenericServlet Demo</h3>
+		<p class="subtitle text-center">Demonstrates init-param,
+			context-param & forwarding</p>
+
+		<form action="basic2" method="GET">
+
+			<div class="mb-3">
+				<label class="form-label">Username</label> <input type="text"
+					name="username" class="form-control" placeholder="Enter your name"
+					required>
+			</div>
+
+			<div class="mb-3">
+				<label class="form-label">Email</label> <input type="email"
+					name="email" class="form-control" placeholder="you@example.com"
+					required>
+			</div>
+
+			<button type="submit" class="btn btn-primary-custom w-100 mt-2">
+				Submit to Servlet</button>
+
+		</form>
+
+
+
 
 
 

@@ -84,7 +84,7 @@ label {
 			<%= request.getAttribute("msg") == null ? "No message yet." : request.getAttribute("msg") %>
 		</p>
 
-		<form action="basic" method="GET">
+		<form action="basic1" method="GET">
 			<label for="user">Enter your name:</label> 
 			<input type="text" id="user" name="user" placeholder="Type your name..." required />
 
