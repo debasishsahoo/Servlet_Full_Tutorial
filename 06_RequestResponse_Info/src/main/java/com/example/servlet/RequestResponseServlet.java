@@ -24,7 +24,13 @@ public class RequestResponseServlet extends GenericServlet {
 					String p = paramNames.nextElement();
 					params.put(p, request.getParameterValues(p));
 				}
-
+				 // Default test parameters if none found
+				if (params.isEmpty()) {
+					params.put("name", new String[] {"Debasish"});
+					params.put("email", new String[] {"debasish@deb.com"});
+					params.put("phn", new String[] {"12345678891"});
+				}
+				
 				// Add sample request attributes (FIX)
 				request.setAttribute("loggedInUser", "Debasish");
 				request.setAttribute("message", "Hello from Servlet!");
