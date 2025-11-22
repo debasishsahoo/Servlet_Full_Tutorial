@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="java.util.Map"%>
+<%@ page import="java.util.Arrays"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +21,19 @@
 		<div
 			class="bg-gray-50 p-4 border rounded-lg shadow-inner max-h-64 overflow-y-auto">
 			<ul class="list-disc ml-6">
-			<li class="text-gray-500">No parameters found</li>
+
+				<%
+				Map<String, String[]> params = (Map<String, String[]>) request.getAttribute("params");
+				if (params.isEmpty()) {
+				%>
+				<li class="text-gray-500">No parameters found</li>
+				<%
+				} else {
+				for (String key : params.keySet()) {
+					String val = Arrays.toString(params.get(key));
+				%>
+				<li class="mb-2"><b><%=key%>:</b> <%=val%></li>
+				<%}}%>
 			</ul>
 		</div>
 
@@ -29,18 +43,18 @@
 		<div
 			class="bg-gray-50 p-4 border rounded-lg shadow-inner max-h-64 overflow-y-auto">
 			<ul class="list-disc ml-6">
-			<li class="text-gray-500">No attributes found</li></ul>
+				<li class="text-gray-500">No attributes found</li>
+			</ul>
 		</div>
-		
-		
+
+
 		<!-- CONNECTION INFO -->
 		<h2 class="text-2xl font-semibold mt-10 mb-3">Connection
 			Information</h2>
 		<div
 			class="bg-gray-50 p-4 border rounded-lg shadow-inner max-h-64 overflow-y-auto">
 			<ul class="list-disc ml-6">
-			<li class="text-gray-500">No Connection
-			Information found</li>
+				<li class="text-gray-500">No Connection Information found</li>
 			</ul>
 		</div>
 	</div>
