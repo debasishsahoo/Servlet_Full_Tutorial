@@ -47,7 +47,7 @@ public class ResponseDemoServlet extends HttpServlet {
 			break;
 		}
 
-		case "local": {
+		case "locale": {
 			response.setLocale(Locale.FRANCE);
 			request.setAttribute("localeMsg", "Locale set to: " + response.getLocale());
 			RequestDispatcher rd = request.getRequestDispatcher("localeView.jsp");
