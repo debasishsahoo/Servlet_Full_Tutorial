@@ -1,0 +1,1 @@
+http://localhost:8080/06_RequestResponse_Info/index.jsp?name=Debasish&email=debasish@example.com&age=25
