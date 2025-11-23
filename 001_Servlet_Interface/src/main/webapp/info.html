@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jakarta.servlet.Servlet Interface</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Prism.js for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+  <style>
+    pre[class*="language-"] {
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen py-12">
+
+  <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl p-10">
+    <h1 class="text-3xl font-bold text-blue-700 mb-6">
+      jakarta.servlet.Servlet Interface
+    </h1>
+
+    <p class="text-gray-700 mb-6 leading-relaxed">
+      The <code class="bg-gray-100 text-blue-700 px-1 rounded">Servlet</code> interface defines methods 
+      that all servlets must implement.  
+      A servlet is a small Java program that runs within a Web server.  
+      Servlets receive and respond to requests from Web clients, usually across HTTP.
+    </p>
+
+    <div class="border-t border-gray-300 my-8"></div>
+
+    <h2 class="text-2xl font-semibold text-indigo-700 mb-4">📘 Source Code</h2>
+
+    <pre class="language-java"><code>
+package jakarta.servlet;
+
+import java.io.IOException;
+
+/**
+ * The Servlet interface defines methods that all servlets must implement.
+ *
+ * A servlet is a small Java program that runs within a Web server.
+ * Servlets receive and respond to requests from Web clients, usually across HTTP.
+ */
+public interface Servlet {
+
+    /**
+     * Called by servlet container to initialize the servlet
+     * @param config ServletConfig object containing servlet's configuration
+     * @throws ServletException if initialization fails
+     */
+    void init(ServletConfig config) throws ServletException;
+
+    /**
+     * Called by servlet container to handle each request
+     * @param req ServletRequest object containing client request
+     * @param res ServletResponse object for sending response
+     * @throws ServletException if servlet encounters difficulty
+     * @throws IOException if I/O error occurs
+     */
+    void service(ServletRequest req, ServletResponse res)
+        throws ServletException, IOException;
+
+    /**
+     * Called by servlet container when servlet is being destroyed
+     */
+    void destroy();
+
+    /**
+     * Returns ServletConfig object containing servlet's configuration
+     * @return ServletConfig object
+     */
+    ServletConfig getServletConfig();
+
+    /**
+     * Returns information about servlet (author, version, copyright)
+     * @return String containing servlet information
+     */
+    String getServletInfo();
+}
+    </code></pre>
+
+    <div class="border-t border-gray-300 my-8"></div>
+
+    <h2 class="text-2xl font-semibold text-indigo-700 mb-4">⚙️ Lifecycle Overview</h2>
+
+    <ul class="list-disc list-inside text-gray-700 space-y-2">
+      <li><b>init()</b> — Called once when the servlet is first loaded into memory.</li>
+      <li><b>service()</b> — Called for every incoming client request.</li>
+      <li><b>destroy()</b> — Called once before the servlet is unloaded from memory.</li>
+      <li><b>getServletConfig()</b> — Provides access to servlet configuration parameters.</li>
+      <li><b>getServletInfo()</b> — Returns descriptive information about the servlet.</li>
+    </ul>
+
+    <div class="mt-10 text-center">
+      <a href="index.jsp"
+         class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition-all duration-200">
+        ← Back to Home
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
