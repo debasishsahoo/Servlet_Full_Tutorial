@@ -60,7 +60,6 @@ public class LifecycleServlet implements Servlet {
 	public ServletConfig getServletConfig() {
 		return config;
     }
-	}
 
 	public String getServletInfo() {
 		return "LifecycleServlet v3.0 - Simple Servlet Lifecycle Example";
