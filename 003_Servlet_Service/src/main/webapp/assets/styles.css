@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f9f9f9;
+    color: #333;
+}
+
+h1, h2 {
+    color: #007bff;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+.message {
+    padding: 10px;
+    background-color: #e9f5ff;
+    border-left: 4px solid #007bff;
+    margin: 15px 0;
+}
