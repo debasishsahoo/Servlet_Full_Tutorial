@@ -1,0 +1,49 @@
+/* /assets/style.css */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f6f8;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 80%;
+	margin: 40px auto;
+	background: #fff;
+	padding: 20px 30px;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	color: #007acc;
+}
+
+.nav-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+.nav-list li {
+	margin: 12px 0;
+}
+
+.nav-list a {
+	text-decoration: none;
+	color: #007acc;
+	font-weight: bold;
+}
+
+.nav-list a:hover {
+	text-decoration: underline;
+}
+
+p {
+	line-height: 1.6;
+}
+
+a {
+	color: #007acc;
+}
+
+@charset "UTF-8";
